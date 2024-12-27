@@ -52,6 +52,14 @@ const boardLogic = (event) => {
                 return;
             }
         }
+
+        // match draw condition
+        if(total_turn === 9) {
+            document.getElementById('show-result').innerHTML = 'Match Draw';
+            board.removeEventListener('click', boardLogic);
+            return;
+        }
+
     }
 
     
